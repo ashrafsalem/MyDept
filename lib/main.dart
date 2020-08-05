@@ -11,6 +11,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'My Depts App',
+      theme: ThemeData(
+        primarySwatch: Colors.yellow,
+        accentColor: Colors.lightGreen,
+      ),
       home: MyHomePage(),
     );
   }
@@ -81,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Card(
                 child: Text('Bar Chart'),
                 elevation: 5,
-                color: Colors.blue,
+                color: Theme.of(context).primaryColor,
               ),
             ),
             TransactionList(
