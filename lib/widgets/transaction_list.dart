@@ -8,6 +8,7 @@ class TransactionList extends StatelessWidget {
 
   TransactionList({this.transactions});
 
+  @deprecated
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -41,10 +42,7 @@ class TransactionList extends StatelessWidget {
                   children: <Widget>[
                     Text(
                       transactions[index].title,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      ),
+                      style: Theme.of(context).textTheme.title,
                     ),
                     Text(
                       DateFormat.yMMMd().format(transactions[index].date),

@@ -6,14 +6,32 @@ import './models/transaction.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  @deprecated
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'My Depts App',
       theme: ThemeData(
-        primarySwatch: Colors.yellow,
-        accentColor: Colors.lightGreen,
+        primarySwatch: Colors.lightGreen,
+        accentColor: Colors.yellow,
+        fontFamily: 'Quicksand',
+        textTheme: ThemeData.light().textTheme.copyWith(
+              title: TextStyle(
+                fontFamily: 'OpenSans',
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+              ),
+            ),
+        appBarTheme: AppBarTheme(
+          textTheme: ThemeData.light().textTheme.copyWith(
+                title: TextStyle(
+                  fontFamily: 'OpenSans',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
+              ),
+        ),
       ),
       home: MyHomePage(),
     );
